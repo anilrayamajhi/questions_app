@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'users/new' => 'users#new', as: 'new_user'
   get 'users/:id' => 'users#show', as: 'user'
   post 'users' => 'users#create'
+  get '/users/:id/edit' => 'users#edit', as: 'edit_user'
+  patch '/user/:id' => 'users#update'
+  delete 'users/:id' => 'users#destroy', as: 'delete_user'
 
   # root 'questions#index'
 
