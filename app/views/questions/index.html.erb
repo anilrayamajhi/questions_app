@@ -1,0 +1,11 @@
+<h1>Questions#index</h1>
+<p>Find me in app/views/questions/index.html.erb</p>
+<br />
+
+
+
+<% @questions.each do |q|%>
+<hr />
+<h2><%= link_to q.title, "/questions/#{q.id}", :style => 'text-decoration: none' %></h2>
+<button><%= link_to 'Delete Question', delete_question_path(q), method: "delete", :style => 'text-decoration: none' %></button>
+<% end %>

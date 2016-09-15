@@ -1,0 +1,15 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+
+<h3><%= @user.username %></h3>
+
+<p><%= @user.email %></p>
+
+
+<ul><% @user.questions.each do |el| %>
+
+<li><%= link_to el.title, question_path(el) %></li>
+
+<% end %>
+</ul>

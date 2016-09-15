@@ -1,0 +1,10 @@
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+
+<%= link_to 'Create username', new_user_path %>
+
+<% @users.each do |q|%>
+<hr />
+<h2><%= link_to q.username, "/users/#{q.id}", :style => 'text-decoration: none' %></h2>
+<button><%= link_to 'Delete Question', delete_question_path(q), method: "delete", :style => 'text-decoration: none' %></button>
+<% end %>

@@ -1,0 +1,12 @@
+<h1>Questions#show</h1>
+<p>Find me in app/views/questions/show.html.erb</p>
+<br />
+<h3><%= @question.title %></h3>
+<p>
+  <%= @question.body %>
+</p>
+<ul>
+  <% @question.answers.each do |el| %>
+  <p><%= el.body %></p>
+  <% end %>
+</ul>
