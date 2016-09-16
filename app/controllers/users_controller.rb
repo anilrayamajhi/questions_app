@@ -25,7 +25,9 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.new({username: params[:user][:username], email: params[:user][:email]})
+    @user = User.new
+    @user.username= params[:user][:username]
+    @user.email= params[:user][:email]
     # user.new({title: "GA", description: "GA Rocks!", url: "http:ksndkasnd"})
 
     if @user.save
